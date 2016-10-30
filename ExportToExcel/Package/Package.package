@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="b9413dc7-1b02-4f1d-9724-2735c895e182" solutionId="b9413dc7-1b02-4f1d-9724-2735c895e182" resetWebServer="false" resetWebServerModeOnUpgrade="Recycle" name="ExportToExcel" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="ClosedXML.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="packages\ClosedXML.0.69.2\lib\net35-client\ClosedXML.dll" />
+    <customAssembly location="DocumentFormat.OpenXml.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="packages\DocumentFormat.OpenXml.1.0\lib\DocumentFormat.OpenXml.dll" />
+  </assemblies>
+  <features>
+    <featureReference itemId="9ce785e9-473a-4f13-94c0-6ace78f108fa" />
+  </features>
+</package>

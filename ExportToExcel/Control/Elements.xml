@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Control 
+    Id="AdditionalPageHead"
+    Sequence="1000"
+    ControlAssembly="$SharePoint.Project.AssemblyFullName$" 
+    ControlClass="$SharePoint.Type.7fd7c6f0-4eda-48ce-ac8f-aa9f9d2666ac.FullName$"/>
+</Elements>

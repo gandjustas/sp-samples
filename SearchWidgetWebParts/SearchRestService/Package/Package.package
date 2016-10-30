@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="06025138-686d-480f-b0f6-72bb5560b7c8" solutionId="06025138-686d-480f-b0f6-72bb5560b7c8" resetWebServer="false" name="SearchRestService" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <projectItems>
+    <projectItemReference itemId="b0ae991c-9680-4db1-a294-36528de72d1b" />
+  </projectItems>
+</package>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CodeAccessSecurity>
+    <PolicyItem>
+      <PermissionSet class="NamedPermissionSet" version="1">
+        <IPermission class="SecurityPermission" version="1" Flags="Execution" />
+        <IPermission class="AspNetHostingPermission" version="1" Level="Minimal" />
+        <IPermission class="Microsoft.SharePoint.Security.SharePointPermission, Microsoft.SharePoint.Security, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" version="1" ObjectModel="True" />
+      </PermissionSet>
+      <Assemblies>
+        <Assembly Name="$SharePoint.Project.AssemblyName$" Version="$SharePoint.Project.AssemblyVersion$" PublicKeyBlob="$SharePoint.Project.AssemblyPublicKeyBlob$"/>
+      </Assemblies>
+    </PolicyItem>
+  </CodeAccessSecurity>
+</Solution>

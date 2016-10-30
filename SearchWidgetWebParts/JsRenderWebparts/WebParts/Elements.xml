@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="WebParts" Path="WebParts">
+  <File Path="SearchResults.webpart" Url="_catalogs/wp/SearchResults.webpart" Type="GhostableInLibrary" >    
+      <Property Name="Group" Value="Custom" />
+    </File>
+<File Path="jsRenderSearchResults.js" Url="SiteAssets/jsRenderSearchResults.js"  Type="GhostableInLibrary" />
+<File Path="jsRenderSearchResults.tmpl.html" Url="SiteAssets/templates/jsRenderSearchResults.tmpl.html"  Type="GhostableInLibrary" />
+</Module>
+</Elements>

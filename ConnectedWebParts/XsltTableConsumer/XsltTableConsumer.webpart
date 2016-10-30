@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="$SharePoint.Type.b914adea-e076-4392-9c8e-f426c58e5ea7.AssemblyQualifiedName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">Xslt Table Consumer</property>
+        <property name="Description" type="string">My WebPart</property>
+        <property name="Xsl" type="string">My WebPart</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

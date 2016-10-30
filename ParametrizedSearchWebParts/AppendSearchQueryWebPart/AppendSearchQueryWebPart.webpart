@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="$SharePoint.Type.6ba2a020-2ec0-46b4-b876-1cbc7fb34220.AssemblyQualifiedName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">Search query appender</property>
+        <property name="Description" type="string">Web part appends string to search query. Web part is accepting connections. 
+        Define parameters in query string in format: {&lt;name&gt;:&lt;type with namespace&gt; (&lt;format string&gt;)}, format string is optional
+      </property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3CE388A6-4E67-4C52-B436-C1D585B24E5E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>jqWidgetWebPart</RootNamespace>
+    <AssemblyName>jqWidgetWebPart</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <AssemblyDeploymentTarget>GlobalAssemblyCache</AssemblyDeploymentTarget>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\EnsureSiteAssetsFeature\EnsureSiteAssetsFeature.EventReceiver.cs">
+      <DependentUpon>EnsureSiteAssetsFeature.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WidgetWebPart\WidgetEditorPart.cs" />
+    <Compile Include="WidgetWebPart\WidgetWebPart.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Features\EnsureSiteAssetsFeature\EnsureSiteAssetsFeature.feature">
+      <FeatureId>{1ad96d32-06bc-4d13-b0d5-2d119fbcdfa5}</FeatureId>
+    </None>
+    <None Include="Features\jQuerySiteFeature\jQuerySiteFeature.feature">
+      <FeatureId>{f08c403c-fbf8-4bf9-ae31-816cdf72d45c}</FeatureId>
+    </None>
+    <None Include="Features\SiteFeature\SiteFeature.feature">
+      <FeatureId>{27ca5fc9-f8f5-45b8-9898-e2180cc697eb}</FeatureId>
+    </None>
+    <None Include="jquery\jQueryFiles\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{387866f1-e8bc-4b00-a3b0-0c9bb5caf72d}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{8fea3a1e-5480-451d-beec-3d15cdfdf4a9}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="ScriptFiles\jquery-webpart-bundle.js.bundle" />
+    <None Include="ScriptFiles\jquery-webpart-bundle.min.js.map">
+      <DependentUpon>jquery-webpart-bundle.js.bundle</DependentUpon>
+    </None>
+    <None Include="ScriptFiles\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d6f2ce0d-3378-4f37-8809-7a7cdaf94ef7}</SharePointProjectItemId>
+    </None>
+    <None Include="WidgetWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{484fa212-e18f-4da8-87a2-40355442e4ab}</SharePointProjectItemId>
+    </None>
+    <None Include="WidgetWebPart\WidgetWebPart.webpart" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Features\EnsureSiteAssetsFeature\EnsureSiteAssetsFeature.Template.xml">
+      <DependentUpon>EnsureSiteAssetsFeature.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\jQuerySiteFeature\jQuerySiteFeature.Template.xml">
+      <DependentUpon>jQuerySiteFeature.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\SiteFeature\SiteFeature.Template.xml">
+      <DependentUpon>SiteFeature.feature</DependentUpon>
+    </Content>
+    <Content Include="jquery\jQueryFiles\Elements.xml" />
+    <Content Include="ScriptFiles\amplify.js" />
+    <Content Include="ScriptFiles\amplify.min.js" />
+    <Content Include="ScriptFiles\dataManager.js" />
+    <Content Include="ScriptFiles\defaultWidget.js" />
+    <Content Include="ScriptFiles\Elements.xml" />
+    <Content Include="ScriptFiles\jquery-webpart-bundle.js">
+      <DependentUpon>jquery-webpart-bundle.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="ScriptFiles\jquery-webpart-bundle.min.js">
+      <DependentUpon>jquery-webpart-bundle.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="ScriptFiles\jquery.webpart.js" />
+    <Content Include="jquery\jQueryFiles\jquery-1.8.3.intellisense.js" />
+    <Content Include="jquery\jQueryFiles\jquery-1.8.3.js" />
+    <Content Include="jquery\jQueryFiles\jquery-1.8.3.min.js" />
+    <Content Include="jquery\jQueryFiles\jquery-ui-1.9.2.js" />
+    <Content Include="jquery\jQueryFiles\jquery-ui-1.9.2.min.js" />
+    <Content Include="ScriptFiles\jsrender.js" />
+    <Content Include="ScriptFiles\templateManager.js" />
+    <Content Include="WidgetWebPart\Elements.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

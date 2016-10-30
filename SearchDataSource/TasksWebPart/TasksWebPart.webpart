@@ -1,0 +1,265 @@
+﻿<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="Microsoft.SharePoint.WebPartPages.DataFormWebPart, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+      <importErrorMessage>Невозможно импортировать эту веб-часть.</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="InitialAsyncDataFetch" type="bool">False</property>
+        <property name="ChromeType" type="chrometype">Default</property>
+        <property name="Title" type="string">Задачи пользователя</property>
+        <property name="Height" type="string" />
+        <property name="CacheXslStorage" type="bool">True</property>
+        <property name="XslLink" type="string" null="true" />
+        <property name="AllowZoneChange" type="bool">True</property>
+        <property name="AllowEdit" type="bool">True</property>
+        <property name="XmlDefinitionLink" type="string" />
+        <property name="DataFields" type="string">@WorkId,WorkId;@Rank,Rank;@Title,Title;@Author,Author;@Size,Size;@Path,Path;@Description,Description;@Write,Write;@SiteName,SiteName;@CollapsingStatus,CollapsingStatus;@HitHighlightedSummary,HitHighlightedSummary;@HitHighlightedProperties,HitHighlightedProperties;@ContentClass,ContentClass;@IsDocument,IsDocument;@PictureThumbnailURL,PictureThumbnailURL;@ServerRedirectedURL,ServerRedirectedURL;</property>
+        <property name="AutoRefreshInterval" type="int">60</property>
+        <property name="NoDefaultStyle" type="string">TRUE</property>
+        <property name="ListDisplayName" type="string" />
+        <property name="AutoRefresh" type="bool">False</property>
+        <property name="ViewFlag" type="string">8</property>
+        <property name="ListUrl" type="string" />
+        <property name="AllowConnect" type="bool">True</property>
+        <property name="Description" type="string" />
+        <property name="AllowClose" type="bool">True</property>
+        <property name="ShowWithSampleData" type="bool">False</property>
+        <property name="ParameterBindings" type="string" />
+        <property name="Xsl" type="string">
+
+&lt;xsl:stylesheet version="1.0" exclude-result-prefixes="xsl msxsl ddwrt" xmlns:ddwrt="http://schemas.microsoft.com/WebParts/v2/DataView/runtime" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:SharePoint="Microsoft.SharePoint.WebControls" xmlns:ddwrt2="urn:frontpage:internal"&gt;
+	&lt;xsl:output method="html" indent="no"/&gt;
+	&lt;xsl:decimal-format NaN=""/&gt;
+						&lt;xsl:param name="dvt_apos"&gt;'&lt;/xsl:param&gt;
+						&lt;xsl:param name="ManualRefresh"&gt;&lt;/xsl:param&gt;
+						&lt;xsl:param name="dvt_firstrow"&gt;1&lt;/xsl:param&gt;
+						&lt;xsl:param name="FileName" /&gt;
+						&lt;xsl:param name="dvt_nextpagedata" /&gt;
+						&lt;xsl:variable name="dvt_1_automode"&gt;0&lt;/xsl:variable&gt;
+						&lt;xsl:template match="/"&gt;
+							&lt;xsl:choose&gt;
+								&lt;xsl:when test="($ManualRefresh = 'True')"&gt;
+				&lt;table width="100%" border="0" cellpadding="0" cellspacing="0"&gt;
+					&lt;tr&gt;
+						&lt;td valign="top"&gt;
+							&lt;xsl:call-template name="dvt_1"/&gt;
+						&lt;/td&gt;
+						&lt;td width="1%" class="ms-vb" valign="top"&gt;
+							&lt;img src="/_layouts/images/staticrefresh.gif" id="ManualRefresh" border="0" onclick="javascript: {ddwrt:GenFireServerEvent('__cancel')}" alt="Click here to refresh the dataview."/&gt;
+						&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/table&gt;
+			&lt;/xsl:when&gt;
+								&lt;xsl:otherwise&gt;
+									&lt;xsl:call-template name="dvt_1"/&gt;
+			&lt;/xsl:otherwise&gt;
+							&lt;/xsl:choose&gt;
+	&lt;/xsl:template&gt;
+						&lt;xsl:template name="dvt_1"&gt;
+							&lt;xsl:variable name="dvt_StyleName"&gt;Table&lt;/xsl:variable&gt;
+							&lt;xsl:variable name="Rows" select="/dsQueryResponse/NewDataSet/Row"/&gt;
+							&lt;xsl:variable name="dvt_RowCount" select="count($Rows)"/&gt;
+							&lt;xsl:variable name="RowLimit" select="10" /&gt;
+							&lt;xsl:variable name="FirstRow" select="$dvt_firstrow" /&gt;
+							&lt;xsl:variable name="LastRow"&gt;
+								&lt;xsl:choose&gt;
+									&lt;xsl:when test="($FirstRow + $RowLimit - 1) &amp;gt; $dvt_RowCount"&gt;&lt;xsl:value-of select="$dvt_RowCount" /&gt;&lt;/xsl:when&gt;
+									&lt;xsl:otherwise&gt;&lt;xsl:value-of select="$FirstRow + $RowLimit - 1" /&gt;&lt;/xsl:otherwise&gt;
+								&lt;/xsl:choose&gt;
+							&lt;/xsl:variable&gt;
+							&lt;xsl:variable name="IsEmpty" select="$dvt_RowCount = 0" /&gt;
+							&lt;xsl:variable name="dvt_IsEmpty" select="$dvt_RowCount = 0"/&gt;
+							
+							&lt;xsl:choose&gt;
+								&lt;xsl:when test="$dvt_IsEmpty"&gt;
+									&lt;xsl:call-template name="dvt_1.empty"/&gt;
+			&lt;/xsl:when&gt;
+								&lt;xsl:otherwise&gt;
+				&lt;table border="0" width="100%" cellpadding="2" cellspacing="0"&gt;
+					&lt;tr valign="top"&gt;
+						&lt;xsl:if test="$dvt_1_automode = '1'" ddwrt:cf_ignore="1"&gt;
+							&lt;th class="ms-vh" width="1%" nowrap="nowrap"&gt;&lt;/th&gt;
+						&lt;/xsl:if&gt;
+						&lt;th class="ms-vh" nowrap="nowrap"&gt;WorkId&lt;/th&gt;
+						&lt;th class="ms-vh" nowrap="nowrap"&gt;Rank&lt;/th&gt;
+						&lt;th class="ms-vh" nowrap="nowrap"&gt;Title&lt;/th&gt;
+						&lt;th class="ms-vh" nowrap="nowrap"&gt;Author&lt;/th&gt;
+						&lt;th class="ms-vh" nowrap="nowrap"&gt;Size&lt;/th&gt;
+					&lt;/tr&gt;
+					&lt;xsl:call-template name="dvt_1.body"&gt;
+						&lt;xsl:with-param name="Rows" select="$Rows[position() &amp;gt;= $FirstRow and position() &amp;lt;= $LastRow]"/&gt;
+						&lt;xsl:with-param name="FirstRow" select="1" /&gt;
+						&lt;xsl:with-param name="LastRow" select="$dvt_RowCount" /&gt;
+					&lt;/xsl:call-template&gt;
+				&lt;/table&gt;
+			&lt;/xsl:otherwise&gt;
+							&lt;/xsl:choose&gt;
+							&lt;xsl:call-template name="dvt_1.commandfooter"&gt;
+								&lt;xsl:with-param name="FirstRow" select="$FirstRow" /&gt;
+								&lt;xsl:with-param name="LastRow" select="$LastRow" /&gt;
+								&lt;xsl:with-param name="RowLimit" select="$RowLimit" /&gt;
+								&lt;xsl:with-param name="dvt_RowCount" select="$dvt_RowCount" /&gt;
+								&lt;xsl:with-param name="RealLastRow" select="number(ddwrt:NameChanged('',-100))" /&gt;
+							&lt;/xsl:call-template&gt;
+						&lt;/xsl:template&gt;
+						&lt;xsl:template name="dvt_1.body"&gt;
+							&lt;xsl:param name="Rows"/&gt;
+							&lt;xsl:param name="FirstRow" /&gt;
+							&lt;xsl:param name="LastRow" /&gt;
+							&lt;xsl:for-each select="$Rows"&gt;
+								&lt;xsl:variable name="dvt_KeepItemsTogether" select="false()" /&gt;
+								&lt;xsl:variable name="dvt_HideGroupDetail" select="false()" /&gt;
+								&lt;xsl:if test="(position() &amp;gt;= $FirstRow and position() &amp;lt;= $LastRow) or $dvt_KeepItemsTogether"&gt;
+									&lt;xsl:if test="not($dvt_HideGroupDetail)" ddwrt:cf_ignore="1"&gt;
+										&lt;xsl:call-template name="dvt_1.rowview" /&gt;
+									&lt;/xsl:if&gt;
+								&lt;/xsl:if&gt;
+							&lt;/xsl:for-each&gt;
+	&lt;/xsl:template&gt;
+						&lt;xsl:template name="dvt_1.rowview"&gt;
+		&lt;tr&gt;
+			&lt;xsl:if test="position() mod 2 = 1"&gt;
+				&lt;xsl:attribute name="class"&gt;ms-alternating&lt;/xsl:attribute&gt;
+			&lt;/xsl:if&gt;
+			&lt;xsl:if test="$dvt_1_automode = '1'" ddwrt:cf_ignore="1"&gt;
+				&lt;td class="ms-vb" width="1%" nowrap="nowrap"&gt;
+					&lt;span ddwrt:amkeyfield="" ddwrt:amkeyvalue="string($XPath)" ddwrt:ammode="view"&gt;&lt;/span&gt;
+				&lt;/td&gt;
+			&lt;/xsl:if&gt;
+			&lt;td class="ms-vb"&gt;
+				&lt;xsl:value-of select="@WorkId"/&gt;
+			&lt;/td&gt;
+			&lt;td class="ms-vb"&gt;
+				&lt;xsl:value-of select="@Rank"/&gt;
+			&lt;/td&gt;
+			&lt;td class="ms-vb"&gt;
+				&lt;xsl:value-of select="@Title"/&gt;
+			&lt;/td&gt;
+			&lt;td class="ms-vb"&gt;
+				&lt;xsl:value-of select="@Author"/&gt;
+			&lt;/td&gt;
+			&lt;td class="ms-vb"&gt;
+				&lt;xsl:value-of select="@Size"/&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/xsl:template&gt;
+						&lt;xsl:template name="dvt_1.empty"&gt;
+							&lt;xsl:variable name="dvt_ViewEmptyText"&gt;Нет элементов для отображения в этом представлении.&lt;/xsl:variable&gt;
+		&lt;table border="0" width="100%"&gt;
+			&lt;tr&gt;
+				&lt;td class="ms-vb"&gt;
+					&lt;xsl:value-of select="$dvt_ViewEmptyText"/&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/table&gt;
+	&lt;/xsl:template&gt;
+						&lt;xsl:template name="dvt_1.commandfooter"&gt;
+							&lt;xsl:param name="FirstRow" /&gt;
+							&lt;xsl:param name="LastRow" /&gt;
+							&lt;xsl:param name="RowLimit" /&gt;
+							&lt;xsl:param name="dvt_RowCount" /&gt;
+							&lt;xsl:param name="RealLastRow" /&gt;
+							&lt;table cellspacing="0" cellpadding="4" border="0" width="100%"&gt;
+			&lt;tr&gt;
+				&lt;xsl:if test="$FirstRow &amp;gt; 1 or $LastRow &amp;lt; $dvt_RowCount"&gt;
+					&lt;xsl:call-template name="dvt_1.navigation"&gt;
+						&lt;xsl:with-param name="FirstRow" select="$FirstRow" /&gt;
+						&lt;xsl:with-param name="LastRow" select="$LastRow" /&gt;
+						&lt;xsl:with-param name="RowLimit" select="$RowLimit" /&gt;
+						&lt;xsl:with-param name="dvt_RowCount" select="$dvt_RowCount" /&gt;
+						&lt;xsl:with-param name="RealLastRow" select="$RealLastRow" /&gt;
+					&lt;/xsl:call-template&gt;
+				&lt;/xsl:if&gt;
+								&lt;/tr&gt;
+		&lt;/table&gt;
+						&lt;/xsl:template&gt;
+						&lt;xsl:template name="dvt_1.navigation"&gt;
+							&lt;xsl:param name="FirstRow" /&gt;
+							&lt;xsl:param name="LastRow" /&gt;
+							&lt;xsl:param name="RowLimit" /&gt;
+							&lt;xsl:param name="dvt_RowCount" /&gt;
+							&lt;xsl:param name="RealLastRow" /&gt;
+							&lt;xsl:variable name="PrevRow"&gt;
+								&lt;xsl:choose&gt;
+									&lt;xsl:when test="$FirstRow - $RowLimit &amp;lt; 1"&gt;1&lt;/xsl:when&gt;
+									&lt;xsl:otherwise&gt;
+					&lt;xsl:value-of select="$FirstRow - $RowLimit" /&gt;
+				&lt;/xsl:otherwise&gt;
+								&lt;/xsl:choose&gt;
+							&lt;/xsl:variable&gt;
+							&lt;xsl:variable name="LastRowValue"&gt;
+								&lt;xsl:choose&gt;
+									&lt;xsl:when test="$LastRow &amp;gt; $RealLastRow"&gt;
+					&lt;xsl:value-of select="$LastRow"&gt;&lt;/xsl:value-of&gt;
+				&lt;/xsl:when&gt;
+									&lt;xsl:otherwise&gt;
+					&lt;xsl:value-of select="$RealLastRow"&gt;&lt;/xsl:value-of&gt;
+				&lt;/xsl:otherwise&gt;
+								&lt;/xsl:choose&gt;
+							&lt;/xsl:variable&gt;
+							&lt;xsl:variable name="NextRow"&gt;
+			&lt;xsl:value-of select="$LastRowValue + 1"&gt;&lt;/xsl:value-of&gt;
+		&lt;/xsl:variable&gt;
+							&lt;td nowrap="nowrap" class="ms-paging" align="right"&gt;
+								&lt;xsl:if test="$dvt_firstrow &amp;gt; 1" ddwrt:cf_ignore="1"&gt;
+				&lt;a&gt;
+									&lt;xsl:attribute name="href"&gt;javascript: &lt;xsl:value-of select="ddwrt:GenFireServerEvent('dvt_firstrow={1}')" /&gt;;&lt;/xsl:attribute&gt;
+									Начать&lt;/a&gt;
+									&lt;xsl:text disable-output-escaping="yes" ddwrt:nbsp-preserve="yes"&gt;&amp;amp;nbsp;&lt;/xsl:text&gt;
+									&lt;a&gt;
+									&lt;xsl:attribute name="href"&gt;javascript: &lt;xsl:value-of select="ddwrt:GenFireServerEvent(concat('dvt_firstrow={',$PrevRow,'}'))" /&gt;;&lt;/xsl:attribute&gt;
+									&lt;img src="/_layouts/images/prev.gif" border="0" alt="Назад" /&gt;
+									&lt;/a&gt;
+									&lt;xsl:text disable-output-escaping="yes" ddwrt:nbsp-preserve="yes"&gt;&amp;amp;nbsp;&lt;/xsl:text&gt;
+								&lt;/xsl:if&gt;
+								&lt;xsl:value-of select="$FirstRow" /&gt;
+								 - &lt;xsl:value-of select="$LastRowValue" /&gt;
+								&lt;xsl:text disable-output-escaping="yes" ddwrt:nbsp-preserve="yes" xmlns:ddwrt="http://schemas.microsoft.com/WebParts/v2/DataView/runtime"&gt;&amp;amp;nbsp;&lt;/xsl:text&gt;
+								
+								&lt;xsl:if test="$LastRowValue &amp;lt; $dvt_RowCount or string-length($dvt_nextpagedata)!=0" ddwrt:cf_ignore="1"&gt;
+				&lt;a&gt;
+									&lt;xsl:attribute name="href"&gt;javascript: &lt;xsl:value-of select="ddwrt:GenFireServerEvent(concat('dvt_firstrow={',$NextRow,'}'))" /&gt;;&lt;/xsl:attribute&gt;
+									&lt;img src="/_layouts/images/next.gif" border="0" alt="Далее" /&gt;
+									&lt;/a&gt;
+			&lt;/xsl:if&gt;
+							&lt;/td&gt;
+						&lt;/xsl:template&gt;
+					&lt;/xsl:stylesheet&gt;	</property>
+        <property name="EnableOriginalValue" type="bool">False</property>
+        <property name="CacheXslTimeOut" type="int">86400</property>
+        <property name="Hidden" type="bool">False</property>
+        <property name="ListName" type="string" />
+        <property name="DataSourceID" type="string" />
+        <property name="FireInitialRow" type="bool">True</property>
+        <property name="ManualRefresh" type="bool">False</property>
+        <property name="ViewFlags" type="Microsoft.SharePoint.SPViewFlags, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">Hidden</property>
+        <property name="ChromeState" type="chromestate">Normal</property>
+        <property name="AllowHide" type="bool">True</property>
+        <property name="PageSize" type="int">-1</property>
+        <property name="SampleData" type="string" null="true" />
+        <property name="AsyncRefresh" type="bool">True</property>
+        <property name="HelpMode" type="helpmode">Modeless</property>
+        <property name="ListId" type="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">00000000-0000-0000-0000-000000000000</property>
+        <property name="UseSQLDataSourcePaging" type="bool">True</property>
+        <property name="AllowMinimize" type="bool">True</property>
+        <property name="TitleUrl" type="string" />
+        <property name="CatalogIconImageUrl" type="string" />
+        <property name="DataSourcesString" type="string">&lt;%@ Register TagPrefix="cc1" Namespace="SearchDataSource.TasksWebPart" Assembly="SearchDataSource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fc0ed41124afc040" %&gt;&lt;cc1:SearchDataSource runat="server" QueryText="contentclass:sts_listitem_tasks" ID="dataformwebpart1"&gt;&lt;/cc1:SearchDataSource&gt;
+</property>
+        <property name="DisplayName" type="string" />
+        <property name="PageType" type="Microsoft.SharePoint.PAGETYPE, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">PAGE_NORMALVIEW</property>
+        <property name="Width" type="string" />
+        <property name="ExportMode" type="exportmode">All</property>
+        <property name="Direction" type="direction">NotSet</property>
+        <property name="ViewContentTypeId" type="string" />
+        <property name="HelpUrl" type="string" />
+        <property name="XmlDefinition" type="string" />
+        <property name="Default" type="string" />
+        <property name="TitleIconImageUrl" type="string" />
+        <property name="MissingAssembly" type="string">Невозможно импортировать эту веб-часть.</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

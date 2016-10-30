@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="$SharePoint.Type.d3501e74-ae96-4fbf-9a22-f3fa81c68f2c.AssemblyQualifiedName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">jQuery UI Widget WebPart</property>
+        <property name="WidgetName" type="string">defaultWidget</property>
+        <property name="WidgetParameterDefinition" type="string">template-name=Name of template file&amp;service-url=Url to REST service</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

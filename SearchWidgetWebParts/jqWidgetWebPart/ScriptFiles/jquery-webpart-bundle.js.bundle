@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bundle minify="true" runOnBuild="true">
+  <!--The order of the <file> elements determines the order of them when bundled.-->
+  <file>/ScriptFiles/defaultWidget.js</file>
+  <file>/ScriptFiles/dataManager.js</file>
+  <file>/ScriptFiles/jquery.webpart.js</file>
+  <file>/ScriptFiles/templateManager.js</file>
+</bundle>

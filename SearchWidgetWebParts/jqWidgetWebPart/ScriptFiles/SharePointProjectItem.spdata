@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="ScriptFiles\" Type="ElementManifest" />
+    <ProjectItemFile Source="jquery.webpart.js" Target="ScriptFiles\" Type="ElementFile" />
+    <ProjectItemFile Source="defaultWidget.js" Target="ScriptFiles\" Type="ElementFile" />
+    <ProjectItemFile Source="jsrender.js" Target="ScriptFiles\" Type="ElementFile" />
+    <ProjectItemFile Source="amplify.js" Target="ScriptFiles\" Type="ElementFile" />
+    <ProjectItemFile Source="amplify.min.js" Target="ScriptFiles\" Type="ElementFile" />
+    <ProjectItemFile Source="dataManager.js" Target="ScriptFiles\" Type="ElementFile" />
+    <ProjectItemFile Source="templateManager.js" Target="ScriptFiles\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-webpart-bundle.js" Target="ScriptFiles\" Type="ElementFile" />
+    <ProjectItemFile Source="jquery-webpart-bundle.min.js" Target="ScriptFiles\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

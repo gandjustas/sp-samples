@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="$SharePoint.Type.c9dc2060-a825-4f03-b1ce-9bb476080604.AssemblyQualifiedName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">Grid Table Consumer</property>
+        <property name="Description" type="string">My WebPart</property>
+        <property name="PageSize" type="int">30</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

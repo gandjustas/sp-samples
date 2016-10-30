@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="ScriptFiles" RootWebOnly="TRUE" Url="SiteAssets" Path="ScriptFiles">
+  <File Path="jquery.webpart.js" Url="jquery.webpart.js" Type="GhostableInLibrary"/>
+  <File Path="defaultWidget.js" Url="defaultWidget.js"  Type="GhostableInLibrary"/>
+  <File Path="jsrender.js" Url="jsrender.js"  Type="GhostableInLibrary"/>
+  <File Path="amplify.js" Url="amplify.js" Type="GhostableInLibrary"/>
+  <File Path="amplify.min.js" Url="amplify.min.js" Type="GhostableInLibrary"/>
+<File Path="dataManager.js" Url="dataManager.js" Type="GhostableInLibrary"/>
+<File Path="templateManager.js" Url="templateManager.js" Type="GhostableInLibrary"/>
+<File Path="jquery-webpart-bundle.js" Url="jquery-webpart-bundle.js" Type="GhostableInLibrary"/>
+<File Path="jquery-webpart-bundle.min.js" Url="jquery-webpart-bundle.min.js" Type="GhostableInLibrary"/>
+</Module>
+
+<CustomAction Location="ScriptLink" Sequence="102" ScriptSrc="~sitecollection/SiteAssets/jsrender.js"/>
+<CustomAction Location="ScriptLink" Sequence="103" ScriptSrc="~sitecollection/SiteAssets/amplify.js"/>
+  <!--<CustomAction Location="ScriptLink" Sequence="104" ScriptSrc="~sitecollection/SiteAssets/templateManager.js" />
+  <CustomAction Location="ScriptLink" Sequence="105" ScriptSrc="~sitecollection/SiteAssets/dataManager.js" />
+  <CustomAction Location="ScriptLink" Sequence="106" ScriptSrc="~sitecollection/SiteAssets/jquery.webpart.js" />-->
+  <CustomAction Location="ScriptLink" Sequence="104" ScriptSrc="~sitecollection/SiteAssets/jquery-webpart-bundle.min.js"/>
+
+</Elements>

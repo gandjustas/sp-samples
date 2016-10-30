@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  
+  <Module Name="jQueryFiles" RootWebOnly="TRUE" Url="SiteAssets" Path="jQueryFiles">
+    <File Path="jquery-1.8.3.min.js" Url="jquery-1.8.3.min.js" Type="GhostableInLibrary" />
+    <File Path="jquery-1.8.3.js" Url="jquery-1.8.3.js"  Type="GhostableInLibrary"/>
+    <File Path="jquery-ui-1.9.2.min.js" Url="jquery-ui-1.9.2.min.js"  Type="GhostableInLibrary"/>
+    <File Path="jquery-ui-1.9.2.js" Url="jquery-ui-1.9.2.js"  Type="GhostableInLibrary"/>
+  </Module>
+
+  <CustomAction Location="ScriptLink" Sequence="100" ScriptSrc="~sitecollection/SiteAssets/jquery-1.8.3.js" />
+  <CustomAction Location="ScriptLink" Sequence="101" ScriptSrc="~sitecollection/SiteAssets/jquery-ui-1.9.2.js" />
+
+</Elements>

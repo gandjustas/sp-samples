@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="8fea3a1e-5480-451d-beec-3d15cdfdf4a9" solutionId="8fea3a1e-5480-451d-beec-3d15cdfdf4a9" resetWebServer="false" name="jqWidgetWebPart" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="27ca5fc9-f8f5-45b8-9898-e2180cc697eb" />
+    <featureReference itemId="f08c403c-fbf8-4bf9-ae31-816cdf72d45c" />
+    <featureReference itemId="1ad96d32-06bc-4d13-b0d5-2d119fbcdfa5" />
+  </features>
+</package>

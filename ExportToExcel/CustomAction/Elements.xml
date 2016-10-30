@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="Ribbon.Actions.ReplacementButton"
+  Location="CommandUI.Ribbon"
+  Title="$Resources:FeatureTitle">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition
+          Location="Ribbon.Library.Actions.ExportToSpreadsheet">
+          <Button Id="Ribbon.Library.Actions.ExportToSpreadsheet-Replacement"
+            Sequence="40"
+            Command="ExportToSpreadsheet-Replacement"
+            Image16by16="/_layouts/$Resources:core,Language;/images/formatmap16x16.png" Image16by16Top="-152" Image16by16Left="-32"
+            Image32by32="/_layouts/$Resources:core,Language;/images/formatmap32x32.png" Image32by32Top="-352" Image32by32Left="0"
+            LabelText="$Resources:core,cui_ButExportToSpreadsheet;"
+            ToolTipTitle="$Resources:core,cui_ButExportToSpreadsheet;"
+            ToolTipDescription="$Resources:core,cui_STT_ButExportListToSpreadsheet;"
+            TemplateAlias="o2"
+              />
+        </CommandUIDefinition>
+        <CommandUIDefinition
+          Location="Ribbon.List.Actions.ExportToSpreadsheet">
+          <Button Id="Ribbon.List.Actions.ExportToSpreadsheet-Replacement"
+            Sequence="40"
+            Command="ExportToSpreadsheet-Replacement"
+            Image16by16="/_layouts/$Resources:core,Language;/images/formatmap16x16.png" Image16by16Top="-152" Image16by16Left="-32"
+            Image32by32="/_layouts/$Resources:core,Language;/images/formatmap32x32.png" Image32by32Top="-352" Image32by32Left="0"
+            LabelText="$Resources:core,cui_ButExportToSpreadsheet;"
+            ToolTipTitle="$Resources:core,cui_ButExportToSpreadsheet;"
+            ToolTipDescription="$Resources:core,cui_STT_ButExportListToSpreadsheet;"
+            TemplateAlias="o1"
+              />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler
+          Command="ExportToSpreadsheet-Replacement"
+          CommandAction="javascript:(function(){var x=GetCurrentCtx(); if (x) {__doPostBack('ExportToSpreadsheet-Replacement', x.listName+'|'+x.view);}})();" />
+      </CommandUIHandlers>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>

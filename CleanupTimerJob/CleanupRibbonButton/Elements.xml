@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="CleanupLibraryButton"
+                Title="Cleanup"
+                RegistrationType="List"
+                RegistrationId="101"
+                Location="CommandUI.Ribbon">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition Location="Ribbon.Library.Settings.Controls._children">
+          <Button Id="Ribbon.Library.Settings.Cleanup"
+                  Command="CleanupLibraryCommand"
+                  TemplateAlias="o2"
+                  LabelText="Cleanup"
+                  Sequence="100"
+                  Image16by16="/_layouts/images/warning16by16.gif"
+                  Image32by32="/_layouts/images/CRIT_32.GIF"                   
+                  />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler Command="CleanupLibraryCommand" 
+                          CommandAction="javascript:submitLibraryToCleanup()"/>
+      </CommandUIHandlers>
+    </CommandUIExtension>
+  </CustomAction>
+  
+  <CustomAction Location="ScriptLink"
+                ScriptSrc="~site/_layouts/CleanupTimerJob/script.js" />
+</Elements>

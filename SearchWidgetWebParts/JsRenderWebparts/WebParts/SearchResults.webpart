@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="jqWidgetWebPart.WidgetWebPart.WidgetWebPart, jqWidgetWebPart, Version=1.0.0.0, Culture=neutral, PublicKeyToken=06151ab944ec6acb" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">JsRender Search Results</property>
+        <property name="WidgetName" type="string">jsRenderSearchResults</property>
+        <property name="WidgetParameters" type="string">query='sharepoint'</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

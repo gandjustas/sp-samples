@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="66853909-b36d-4c3e-88db-ca41961a215b" solutionId="66853909-b36d-4c3e-88db-ca41961a215b" resetWebServer="false" name="CleanupTimerJob" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="40885b71-be1b-478b-85d6-235e0e720bdb" />
+    <featureReference itemId="657a0c1c-3c2b-4697-aaec-dab2c2939a52" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="c9fad165-c517-4e8f-acc6-ce2581fed57c" />
+    <projectItemReference itemId="3c577436-acb9-42f1-9b30-ac9fd8ae48dd" />
+  </projectItems>
+</package>

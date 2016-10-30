@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="53a0625d-0a23-4a8f-b4de-982e98c88df6" solutionId="53a0625d-0a23-4a8f-b4de-982e98c88df6" resetWebServer="false" name="ConnectedWebParts" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="Microsoft.Contracts.dll" deploymentTarget="WebApplication" sourcePath="Microsoft.Contracts.dll" />
+  </assemblies>
+  <features>
+    <featureReference itemId="28067bfe-20ce-4a1d-8278-ce864176becd" />
+  </features>
+</package>
