@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="39724dd8-082c-45d5-9795-9177d2e2bad3" 
+        solutionId="39724dd8-082c-45d5-9795-9177d2e2bad3" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="TimeTrackerApp"
+        sharePointProductVersion="15.0">
+  <features>
+        <featureReference itemId="4f312138-e087-4f90-b67e-03212aeb7641" />
+  </features>
+</package>

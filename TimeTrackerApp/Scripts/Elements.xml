@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Scripts">
+    <File Path="Scripts\view.ts" Url="Scripts/view.ts" ReplaceContent="TRUE" />
+    <File Path="Scripts\typescripttemplates.ts" Url="Scripts/typescripttemplates.ts" ReplaceContent="TRUE" />
+    <File Path="Scripts\typescripttemplates.js" Url="Scripts/typescripttemplates.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\typescripttemplates.min.js" Url="Scripts/typescripttemplates.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\view.js" Url="Scripts/view.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\view.js.map" Url="Scripts/view.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\view.min.js" Url="Scripts/view.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\typescripttemplates.js.map" Url="Scripts/typescripttemplates.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\typings\sharepoint\SharePoint.d.ts" Url="Scripts/typings/sharepoint/SharePoint.d.ts" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

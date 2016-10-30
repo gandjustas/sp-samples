@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BEC8E2F-7512-4139-9424-39ACAD32A2A7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TimeTrackerApp</RootNamespace>
+    <AssemblyName>TimeTrackerApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{3fca0fbc-62a4-4711-ba8b-771d5ad921a2}</AppFeaturePartId>
+    <WspPartId>{4b9f681d-401f-4f3b-b001-3187b6bfb414}</WspPartId>
+    <WorkflowPartId>{5e29ce23-9f2f-4cfb-82cf-ec49dea78145}</WorkflowPartId>
+    <CspkgPartId>{844e4128-93e9-4ffd-b66d-829656842f50}</CspkgPartId>
+    <SqlPackagePartId>{8d3ba19e-42ab-43c3-9cd0-eda00f894038}</SqlPackagePartId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="CheckInOutWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4f4cf0c5-1460-49c8-8e1f-e04c3085ae57}</SharePointProjectItemId>
+    </None>
+    <None Include="Log\LogInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ae8504ce-56a3-4ba1-af63-c6eb6350a850}</SharePointProjectItemId>
+    </None>
+    <None Include="Log\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0a041331-5811-4c03-a852-0153a9e58664}</SharePointProjectItemId>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4fb673ed-8f8d-4f3a-a0a6-480229c66cd0}</SharePointProjectItemId>
+    </None>
+    <Content Include="CheckInOutWebPart\Elements.xml">
+      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    </Content>
+    <Content Include="Log\Elements.xml" />
+    <Content Include="Log\LogInstance\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Log\Schema.xml" />
+    <Content Include="Pages\CheckInOutWebPart.aspx" />
+    <Content Include="Pages\Elements.xml" />
+    <Content Include="Pages\Default.aspx" />
+    <None Include="Scripts\typescripttemplates.js.map">
+      <DependentUpon>typescripttemplates.ts</DependentUpon>
+    </None>
+    <None Include="Scripts\view.js.map">
+      <DependentUpon>view.ts</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8d3ba19e-42ab-43c3-9cd0-eda00f894038}</SharePointProjectItemId>
+    </None>
+    <TypeScriptCompile Include="Scripts\view.ts" />
+    <Content Include="Scripts\Elements.xml" />
+    <Content Include="Scripts\typescripttemplates.js">
+      <DependentUpon>typescripttemplates.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\typescripttemplates.min.js">
+      <DependentUpon>typescripttemplates.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\typescripttemplates.ts" />
+    <Content Include="Scripts\typings\sharepoint\SharePoint.d.ts" />
+    <Content Include="Scripts\view.js">
+      <DependentUpon>view.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\view.min.js">
+      <DependentUpon>view.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\_references.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{186034a2-6c35-4f60-8cdd-6c93379e7d3a}</SharePointProjectItemId>
+    </None>
+    <Content Include="Content\Elements.xml" />
+    <Content Include="Content\App.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+    <Content Include="Images\Elements.xml" />
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{247a4453-cbc6-4556-b832-c6b5cba65bcf}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package\Package.package">
+      <PackageId>{39724dd8-082c-45d5-9795-9177d2e2bad3}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{4f312138-e087-4f90-b67e-03212aeb7641}</FeatureId>
+    </None>
+    <None Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <PropertyGroup>
+    <TypeScriptTarget>ES3</TypeScriptTarget>
+    <TypeScriptIncludeComments>true</TypeScriptIncludeComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" />
+</Project>

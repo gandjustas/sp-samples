@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Pages">
+    <File Path="Pages\Default.aspx" Url="Pages/Default.aspx" ReplaceContent="TRUE" >
+      <View BaseViewID="2" List="Log" WebPartZoneID="full"  />
+    </File>
+    <File Path="Pages\CheckInOutWebPart.aspx" Url="Pages/CheckInOutWebPart.aspx" ReplaceContent="TRUE" >
+      <View BaseViewID="2" List="Log" WebPartZoneID="full"  />
+    </File>
+  </Module>
+</Elements>
