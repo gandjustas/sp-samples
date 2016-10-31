@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Workflow4App" DefaultFile="Workflow.xaml" SupportedTrustLevels="All" SupportedDeploymentScopes="AppPackage" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Workflow.xaml" Target="Workflow1\" Type="AppPackage" />
+  </Files>
+  <ExtensionData>
+    <ExtensionDataItem Key="WorkflowAssociation.EventSourceGUID" Value="808530A7-2566-4CEB-B528-1727855A19D8" />
+    <ExtensionDataItem Key="WorkflowAssociation.HistoryListId" Value="Lists/WorkflowHistoryList" />
+    <ExtensionDataItem Key="WorkflowAssociation.TaskListId" Value="Lists/WorkflowTaskList" />
+    <ExtensionDataItem Key="WorkflowAssociationItemAdded.Enabled" Value="false" />
+    <ExtensionDataItem Key="WorkflowAssociationItemUpdated.Enabled" Value="false" />
+    <ExtensionDataItem Key="WorkflowAssociationManualStart.Description" Value="Workflow1 - WorkflowStart" />
+    <ExtensionDataItem Key="WorkflowAssociationManualStart.DisplayName" Value="Workflow1 - WorkflowStart" />
+    <ExtensionDataItem Key="WorkflowAssociationManualStart.Enabled" Value="true" />
+    <ExtensionDataItem Key="WorkflowAssociationManualStart.EventSourceGUID" Value="808530A7-2566-4CEB-B528-1727855A19D8" />
+    <ExtensionDataItem Key="WorkflowAssociationManualStart.EventType" Value="WorkflowStart" />
+    <ExtensionDataItem Key="WorkflowAssociationManualStart.HistoryListId" Value="Lists/WorkflowHistoryList" />
+    <ExtensionDataItem Key="WorkflowAssociationManualStart.Id" Value="87baf534-4764-4aab-b701-a823dce65452" />
+    <ExtensionDataItem Key="WorkflowAssociationManualStart.TaskListId" Value="Lists/WorkflowTaskList" />
+    <ExtensionDataItem Key="WorkflowDefinition.AssociationUrl" Value="Pages/AssociationForm1.aspx" />
+    <ExtensionDataItem Key="WorkflowDefinition.Description" Value="My 'Workflow1' Workflow" />
+    <ExtensionDataItem Key="WorkflowDefinition.DisplayName" Value="Workflow1" />
+    <ExtensionDataItem Key="WorkflowDefinition.Id" Value="a871b557-0e4c-40d7-85ca-db497c36515b" />
+    <ExtensionDataItem Key="WorkflowDefinition.InitiationUrl" Value="Pages/InitForm1.aspx" />
+    <ExtensionDataItem Key="WorkflowDefinition.RestrictAssociationToId" Value="808530A7-2566-4CEB-B528-1727855A19D8" />
+    <ExtensionDataItem Key="WorkflowDefinition.RestrictAssociationToType" Value="Site" />
+  </ExtensionData>
+</ProjectItem>
