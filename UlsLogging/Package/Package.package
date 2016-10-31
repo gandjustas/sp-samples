@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="07b460db-b466-4b39-b8a0-717cd6a6b358" solutionId="07b460db-b466-4b39-b8a0-717cd6a6b358" resetWebServer="false" resetWebServerModeOnUpgrade="Recycle" sharePointProductVersion="15.0" name="UlsLogging" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="66e9e98d-c9cd-4457-aa89-df70e1f0b521" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="5c2ddec1-296f-46e5-bcc0-a0696483686a" />
+  </projectItems>
+</package>
